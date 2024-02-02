@@ -1,7 +1,6 @@
 @import "../../styles/vars.scss";
 
 .home {
-    
     &-mainBanner {
         margin-bottom: 24px;
 
@@ -51,13 +50,11 @@
                     }
                 }
 
-                &.slick-active {                    
+                &.slick-active {
                     button:before {
                         background: $s-color;
                     }
                 }
-
-                
             }
         }
 
@@ -71,22 +68,21 @@
             }
         }
 
-        .slick-prev {
-            left: 28px;
-            background: url(../../assets/_icon-prev.svg);
+    }
 
-            @media (min-width: $medium) {
-                left: 161px;
-            }
-        }
+    .control-next{
+        height: fit-content !important;
+        background: url(../../assets/_icon-next.svg);
+        top: 50% !important;
+        translate: -50% -50% !important;
+        color: #000;
+    }
 
-        .slick-next {
-            right: 28px;
-            background: url(../../assets/_icon-next.svg);
-
-            @media (min-width: $medium) {
-                right: 161px;
-            }
-        }
+    .control-prev{
+        height: fit-content !important;
+        background: url(../../assets/_icon-prev.svg);
+        top: 50% !important;
+        translate: +50% -50% !important;
+        color: #000;
     }
 }
