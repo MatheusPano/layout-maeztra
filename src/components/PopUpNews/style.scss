@@ -1,0 +1,108 @@
+@import "../../styles/vars.scss";
+
+.PopUpNews {
+    &-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        outline: none;
+        
+        &-close {
+            @include font-secondary-normal(12px, $white);
+
+            margin-bottom: 6px;
+            margin-left: auto;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-container {
+            display: flex;
+            background: $white;
+
+            &-image {
+                display: flex;
+            }
+
+            &-infos {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 40px 20px 24px 20px;
+
+                @media (min-width: $medium) {
+                    padding: 0 51px;
+                }
+
+                &-icon {
+                    display: flex;
+                    margin-bottom: 13px;
+                }
+
+                &-welcome {
+                    @include font-normal(12px, $p-color);
+
+                    margin-bottom: 13px;
+                    text-transform: uppercase;
+                }
+
+                &-text {
+                    @include font-secondary-normal(16px, #787D83);
+
+                    margin-bottom: 25px;
+                    text-align: center;
+                    line-height: 23px;
+
+                    b {
+                        font-weight: 700;
+                    }
+
+                    @media (min-width: $medium) {
+                        @include font-secondary-normal(20px, #787D83);
+                    }
+                }
+
+                &-form {
+                    input {
+                        @include font-normal(12px, $p-color);
+                        @include placeholder(#787D83);
+
+                        width: 258px;
+                        height: 40px;
+                        border: 1px solid #C4C4C4;
+                        border-radius: 10px;
+                        padding-left: 13px;
+                        margin-bottom: 13px;
+                        box-sizing: border-box;
+
+                        @media (min-width: $medium) {
+                            width: 322px;
+                        }
+                    }
+
+                    button {
+                        @include font-bold(12px, $white);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        width: 258px;
+                        height: 40px;
+                        border-radius: 10px;
+                        background: $s-color;
+
+                        @media (min-width: $medium) {
+                            width: 322px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

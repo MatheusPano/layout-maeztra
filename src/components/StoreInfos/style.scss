@@ -1,0 +1,63 @@
+@import "../../styles/vars.scss";
+
+.home {
+    &-storeInfos {
+        margin-bottom: 40px;
+
+        @media (min-width: $medium) {
+            margin-bottom: 74px;
+        }
+
+        @media (max-width: $medium) {
+            &.container {
+                padding: 0;
+            }
+        }
+
+        h3 {
+            @include font-bold(16px, $p-color);
+
+            text-align: center;
+            margin-bottom: 21px;
+        }
+
+        &-content {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 0 31px;
+
+            &::-webkit-scrollbar {
+                height: 0;
+            }
+
+            @media (min-width: $medium) {
+                padding: 0;
+            }
+
+            &-card {
+                min-width: 298px;
+                box-sizing: border-box;
+                height: 64px;
+                padding: 11px 19px 14px 26px;
+                border-radius: 4px;
+                background: $gray;
+                display: flex;
+                gap: 21px;
+                align-items: center;
+
+                @media (min-width: $medium) {
+                    @include fill;
+                }
+
+                h5 {
+                    @include font-bold(14px, $p-color);
+                }
+
+                p {
+                    @include font-normal(12px, $p-color);
+                }
+            }
+        }
+    }
+}

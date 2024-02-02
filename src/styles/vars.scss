@@ -1,0 +1,69 @@
+//colors
+$p-color: #353535;
+$s-color: #faa500;
+$gray: #efefef;
+$white: #fff;
+
+//breakpoints
+$large: 1360px;
+$medium: 1024px;
+$small: 768px;
+
+//fonts
+$font-primary: "Titillium Web", sans-serif;
+$font-secondary: "Lato", sans-serif;
+
+//mixins
+@mixin font-normal($size, $color) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: 400;
+  color: $color;
+  line-height: calc($size + $size / 2);
+}
+
+@mixin font-bold($size, $color) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: 700;
+  color: $color;
+  line-height: calc($size + $size / 2);
+}
+
+@mixin font-secondary-normal($size, $color) {
+  font-family: $font-secondary;
+  font-size: $size;
+  font-weight: 400;
+  color: $color;
+  line-height: calc($size + $size / 2);
+}
+
+@mixin font-secondary-bold($size, $color) {
+  font-family: $font-secondary;
+  font-size: $size;
+  font-weight: 700;
+  color: $color;
+  line-height: calc($size + $size / 2);
+}
+
+@mixin fill {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-stretch;
+  width: stretch;
+}
+
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+}

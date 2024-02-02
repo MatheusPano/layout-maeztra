@@ -1,0 +1,61 @@
+@import "../../styles/vars.scss";
+
+.home {
+    &-shelfsCarousel {
+        margin-bottom: 23px;
+
+        @media (min-width: $medium) {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            @include font-bold(24px, $p-color);
+
+            margin-bottom: 16px;
+            text-align: center;
+
+            @media (min-width: $medium) {
+                @include font-bold(32px, $p-color);
+
+                margin-bottom: 24px;
+            }
+        }
+
+        &-slider {
+            padding-left: 17px;
+            padding-right: 30px;
+
+            @media (min-width: $medium) {
+                padding: 0;
+            }
+
+            .swiper-slide {
+                height: auto;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                display: none;
+
+                @media (min-width: $medium) {
+                    display: block;
+                    width: 19.42px;
+                    height: 32px;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            .swiper-button-prev {
+                left: 0;
+                background: url(../../assets/_icon-prev.svg);
+            }
+
+            .swiper-button-next {
+                right: 0;
+                background: url(../../assets/_icon-next.svg);
+            }
+        }
+    }
+}

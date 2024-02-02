@@ -1,0 +1,92 @@
+@import "../../styles/vars.scss";
+
+.home {
+    
+    &-mainBanner {
+        margin-bottom: 24px;
+
+        &-item {
+            img {
+                width: 100%;
+            }
+        }
+
+        .slick-dots {
+            display: flex !important;
+            gap: 16px;
+            justify-content: center;
+            bottom: 19px;
+
+            @media (min-width: $medium) {
+                bottom: 29px;
+            }
+
+            li {
+                margin: 0;
+                width: auto;
+                height: auto;
+
+                button {
+                    padding: 0;
+                    width: auto;
+                    height: auto;
+
+                    &:before {
+                        opacity: 1;
+                        width: 8px;
+                        height: 8px;
+                        background: transparent;
+                        border: 1px solid $s-color;
+                        content: "";
+                        display: block;
+                        border-radius: 8px;
+                        position: static;
+                        box-sizing: border-box;
+
+                        @media (min-width: $medium) {
+                            width: 16px;
+                            height: 16px;
+                            border-width: 2px;
+                        }
+                    }
+                }
+
+                &.slick-active {                    
+                    button:before {
+                        background: $s-color;
+                    }
+                }
+
+                
+            }
+        }
+
+        .slick-arrow {
+            width: 19.42px;
+            height: 32px;
+            z-index: 1;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        .slick-prev {
+            left: 28px;
+            background: url(../../assets/_icon-prev.svg);
+
+            @media (min-width: $medium) {
+                left: 161px;
+            }
+        }
+
+        .slick-next {
+            right: 28px;
+            background: url(../../assets/_icon-next.svg);
+
+            @media (min-width: $medium) {
+                right: 161px;
+            }
+        }
+    }
+}

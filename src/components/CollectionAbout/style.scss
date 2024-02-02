@@ -1,0 +1,43 @@
+@import "../../styles/vars.scss";
+
+.home {
+    &-collectionAbout {
+        margin-bottom: 40px;
+
+        @media (min-width: $medium) {
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-infos {
+            @media (min-width: $medium) {
+                width: 30%;
+            }
+
+            h2 {
+                @include font-bold(24px, $p-color);
+
+                margin-bottom: 16px;
+            }
+
+            p {
+                @include font-normal(14px, $p-color);
+
+                margin-bottom: 24px;
+                padding-right: 30px;
+
+                @media (min-width: $medium) {
+                    margin: 0;
+                    padding-right: 60px;
+                }
+            }
+        }
+
+        &-img {
+            @media (min-width: $medium) {
+                width: 70%;
+            }
+        }
+    }
+}

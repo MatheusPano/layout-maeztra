@@ -1,0 +1,164 @@
+@import "./../../styles/vars.scss";
+
+.header {
+    &-top-bar {
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $p-color;
+
+        p {
+            @include font-normal(10px, $white);
+
+            @media (min-width: $medium) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-content {
+        padding: 32px 21px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+
+        @media (min-width: $medium) {
+            padding: 21px 0;
+        }
+
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 19px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .header-content-search {
+                width: 49.531%;
+                position: relative;
+                
+                input {
+                    @include font-normal(12px, $p-color);
+                    @include fill;
+                    @include placeholder($p-color);
+
+                    height: 40px;
+                    border-radius: 10px;
+                    background: $gray;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    padding-left: 24px;
+                }
+
+                button {
+                    @include font-normal(14px, $white);
+
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 40px;
+                    background: $s-color;
+                    border-radius: 10px;
+                    width: 119px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+            }
+
+            .header-content-interactive {
+                display: flex;
+                gap: 40px;
+
+                &-item {
+                    height: 46px;
+
+                    a, button {
+                        display: flex;
+                        gap: 8px;
+                        text-decoration: none;
+                        height: 100%;
+                        align-items: center;;
+
+                        p {
+                            @include font-normal(14px, $p-color);
+
+                            transition: .3s;
+                        }
+
+                        img {
+                            transition: .3s;
+                        }
+                    }
+                }
+
+                &-cart {
+                    button {
+                        border-radius: 8px;
+                        border: 1px solid $s-color;
+                        height: 100%;
+                        padding: 0 14px 0 17px;
+                        transition: .3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: $s-color;
+
+                            img {
+                                filter: brightness(5);
+                            }
+
+                            p {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: auto;
+        padding: 14px 30px;
+
+        &-item {
+            a {
+                @include font-normal(14px, $p-color);
+
+                text-decoration: none;
+            
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &-highlight {
+                a {
+                    color: $s-color;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+}
