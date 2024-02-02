@@ -70,19 +70,47 @@
 
     }
 
-    .control-next{
+    /*.control-next{
         height: fit-content !important;
-        background: url(../../assets/_icon-next.svg);
+        background: url(../../assets/_icon-next.svg) !important;
         top: 50% !important;
         translate: -50% -50% !important;
         color: #000;
+    }*/
+
+    .control-next{
+        height: auto;
+        background: url(../../assets/_icon-next.svg) !important;
+        top: 65% !important;
+        translate: -50% -50% !important;
+        color: #000;
+        width: fit-content;
+        background-repeat: no-repeat !important;
+        &::before{
+            border-left: 0px !important;
+        }
     }
 
     .control-prev{
+        height: auto;
+        background: url(../../assets/_icon-prev.svg) !important;
+        top: 65% !important;
+        translate: +50% -50% !important;
+        color: #000;
+        width: fit-content;
+        background-repeat: no-repeat !important;
+        &::before{
+            border-right: 0px !important;
+        }
+    }
+
+    /*.control-prev{
         height: fit-content !important;
-        background: url(../../assets/_icon-prev.svg);
+        background: url(../../assets/_icon-prev.svg) !important;
         top: 50% !important;
         translate: +50% -50% !important;
         color: #000;
-    }
+    }*/
+
+
 }
